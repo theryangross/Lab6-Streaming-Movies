@@ -16,19 +16,19 @@ namespace Lab_6_Streaming_Movies
 
     public class Studio
     {
-        public string StudioID {get; set;}
+        public int StudioID {get; set;}
         public string StudioName {get; set;}
         public List<Movie> Movies {get; set;} //Nav Prop
 
         public override string ToString()
         {
-            return $"Studio - {StudioID} : {StudioName}";
+            return $"Studio : {StudioID} - {StudioName}";
         }
     }
 
     public class Movie
     {
-        public string MovieID {get; set;}
+        public int MovieID {get; set;}
         public string Title {get; set;}
         public string Genre {get; set;}
         public string StudioID {get; set;} //FK
@@ -36,7 +36,7 @@ namespace Lab_6_Streaming_Movies
 
          public override string ToString()
         {
-            return $"Movie - {MovieID} : {Title} - {Genre}";
+            return $"Movie {MovieID} : {Title} - {Genre}";
         }
     }
 }
